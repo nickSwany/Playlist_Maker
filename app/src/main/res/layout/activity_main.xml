@@ -22,21 +22,23 @@
         android:orientation="vertical">
 
         <Button
+            android:id="@+id/search"
             android:layout_width="match_parent"
             android:layout_height="220dp"
             android:layout_marginBottom="16dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
             android:text="@string/find"
+            android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="@dimen/text_size"
-            android:textAllCaps="false"
+            app:cornerRadius="16dp"
             app:icon="@drawable/search"
             app:iconGravity="textStart"
-            app:iconTint="@color/black"
-            app:cornerRadius="16dp"/>
+            app:iconTint="@color/black" />
 
         <Button
+            android:id="@+id/mediateka"
             android:layout_width="match_parent"
             android:layout_height="220dp"
             android:layout_marginBottom="16dp"
@@ -52,6 +54,7 @@
             app:cornerRadius="16dp"/>
 
         <Button
+            android:id="@+id/settings"
             android:layout_width="match_parent"
             android:layout_height="220dp"
             android:layout_weight="1"

@@ -15,9 +15,9 @@
             android:layout_width="48dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            android:layout_marginStart="4dp"
             android:backgroundTint="@color/white"
             app:icon="@drawable/back"
-            app:iconPadding="12dp"
             app:iconTint="@color/black" />
 
         <TextView
