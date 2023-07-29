@@ -1,5 +1,6 @@
 package com.example.playlistmaker
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -9,25 +10,25 @@ import android.widget.Toast
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         setContentView(R.layout.activity_main)
-
         super.onCreate(savedInstanceState)
-        val image = findViewById<Button>(R.id.search)
-        val imageClickListener: View.OnClickListener = object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                Toast.makeText(this@MainActivity, "Тост с любым сообщением =)", Toast.LENGTH_SHORT)
-                    .show()
-            }
-        }
-        image.setOnClickListener(imageClickListener)
 
-        val buttonMediateka = findViewById<Button>(R.id.mediateka)
-        buttonMediateka.setOnClickListener {
-            Toast.makeText(this@MainActivity, "Тут тоже ТОСТ!", Toast.LENGTH_SHORT).show()
+        val searchButton = findViewById<Button>(R.id.search)
+        val mediatecaButton = findViewById<Button>(R.id.mediateka)
+        val settingsButton = findViewById<Button>(R.id.settings)
+
+        searchButton.setOnClickListener {
+            val searchIntent = Intent(this, SearchActivity::class.java)
+            startActivity(searchIntent)
         }
 
-        val buttonSettings = findViewById<Button>(R.id.settings)
-        buttonSettings.setOnClickListener {
-            Toast.makeText(this@MainActivity, "Третья кнопка работает!", Toast.LENGTH_SHORT).show()
+        mediatecaButton.setOnClickListener {
+            val mediatecaIntent = Intent(this, MidiatecaActivity::class.java)
+            startActivity(mediatecaIntent)
+        }
+
+        settingsButton.setOnClickListener {
+            val settingsIntent = Intent(this, SettingsActivity::class.java)
+            startActivity(settingsIntent)
         }
     }
 }
